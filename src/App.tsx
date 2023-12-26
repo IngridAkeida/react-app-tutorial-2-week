@@ -1,5 +1,7 @@
-import ListGroup from "./components/ListGroup";
 import Alert from "./components/Alert";
+import ListGroup from "./components/ListGroup";
+import Button from "./components/Button";
+
 
 function App() {
   const items = [
@@ -16,12 +18,15 @@ function App() {
 
   return (
     <div>
-      <Alert>Hello <span>World</span></Alert>
+      <Alert>
+        Hello <span>World</span>
+      </Alert>
       <ListGroup
         items={items}
         heading="Cities"
         onSelectItem={handleSelectItem}
       />
+      <Button color="success" onClick={() => console.log("clicked")}>Add</Button>
     </div>
   );
 }
